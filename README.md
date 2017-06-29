@@ -1,6 +1,6 @@
 ﻿# Smartware
 "Challenge Based Making" an der Hochschule Mannheim im Sommersemester 2017. Betreut von Prof. Thomas Smits und Prof. Kirstin Kohler.
-Die Projektarbeit dieses Kurses fand in zwei Pfasen statt: Dem Design Thinking und der Umsetzung.
+Die Projektarbeit dieses Kurses fand in zwei Phasen statt: Dem Design Thinking und der Umsetzung.
 
 # Übersicht
 * [POV](#pov)
