@@ -1,11 +1,10 @@
 ﻿# Smartware
 "Challenge Based Making" an der Hochschule Mannheim im Sommersemester 2017. Betreut von Prof. Thomas Smits und Prof. Kirstin Kohler.
-Die Projektarbeit dieses Kurses fand in zwei Pfasen statt: Dem Design Thinking und der Umsetzung.
+Die Projektarbeit dieses Kurses fand in zwei Phasen statt: Dem Design Thinking und der Umsetzung.
 
 # Übersicht
 * [POV](#pov)
 * [Lösungsansatz/Prototyp](#lösungsansatzprototyp)
-	* [Konzept](#konzept)
 * [(Bau-)Anleitung](#bau-anleitung)
 	* [Laserschranke](#laserschranke)
 		* [Schranken](#schranken)
@@ -36,7 +35,7 @@ Das Türsystem erfasst Aktivität im Eingangsbereich. Während die Laserschranke
 
 ## (Bau-)Anleitung
 ### Laserschranke
-Folgende Teile benötigt (Angaben in mm):
+Folgende Teile werden benötigt (Angaben in mm):
 *   2 x OSB-Platte (800 x 150 x 10), als vertikale Halterung
 *   2 x Holzplatte (350 x 150 x 30), aus möglichst schwerem Holz
 *   2 x Dachlatte 360mm lang, als zusätzliche Befestigung -
@@ -51,14 +50,11 @@ Folgende Teile benötigt (Angaben in mm):
 ![Laserhalterung](/img/Laserhalterung.png)
 ![Spiegelhalterung](/img/Spiegelhalterung.png)
 
-Die Halterungen werden wie auf den Bildern zu sehen, zusammengeschraubt und falls gewünscht mit dem Lack besprüht. An der rechten Halterung ist ein Metwallwinkel zu sehen. Dieser wurde an der Oberseite mit etwas Klebeband isoliert, damit er keinen Kurzschluss erzeugt. Darauf wird später der Laser montiert. An der anderen Halterung muss dann die Spiegelhalterung (Dachlatten 70mm lang) angeschraubt werden. In einigem Abstand darunter wird die zweite Spiegelhalterung montiert. Die Spiegel werden dann mit Heißkleber befestigt. 
-Funktionsweise: Der Laser schießt das Licht auf den oberen Spiegel, welcher das Licht auf den unteren reflektiert und anschließend wieder zurück zur anderen Halterung. An der Stelle, wo der Laser wieder auftrifft wird dann der Fototransistor befestigt, sodass erkannt werden kann, ob der Lichtstrahl unterbrochen wurde.
+Die Halterungen werden wie auf den Bildern zu sehen, zusammengeschraubt und falls gewünscht mit dem Lack besprüht. An der rechten Halterung ist ein Metallwinkel zu sehen. Dieser wurde an der Oberseite mit etwas Klebeband isoliert, damit er keinen Kurzschluss erzeugt. Darauf wird später der Laser montiert. An der anderen Halterung muss dann die Spiegelhalterung (Dachlatten 70mm lang) angeschraubt werden. In einigem Abstand darunter wird die zweite Spiegelhalterung montiert. Die Spiegel werden dann mit Heißkleber befestigt. 
+Funktionsweise: Der Laser schießt das Licht auf den oberen Spiegel, welcher das Licht auf den unteren reflektiert und anschließend wieder zurück zur anderen Halterung. An der Stelle, wo der reflektierte Laser wieder auftrifft wird dann der Fototransistor befestigt, sodass erkannt werden kann, ob der Lichtstrahl unterbrochen wurde.
 
 **Bitte beachten Sie:**
 Diese Halterungen waren nur für den Prototyp gedacht. Wenn das System dauerhaft installiert werden soll, ist eine feste Verankerung (bspw. im Türrahmen) sinnvoll.
-
-#### Schranken
-`<Bilder/Text/>`
 
 #### Elektronik
 ![DoorLaser](/img/DoorLaser01.png)
@@ -98,16 +94,16 @@ Außerdem sind Bootstrap und die Material-Icons von Google im Einsatz.
 	Raspberry Pi 3
 	Micro SD Karte
 	Router mit Internetverbindung (Internet nur zur Konfiguration)
-	USB-Maus, USB Tastatur, Netzadapter Micro-USB, HDMI-fähiger Monitor
+	USB-Maus, USB-Tastatur, Netzadapter Micro-USB, HDMI-fähiger Monitor
 
-###### Installieren sie Raspbian auf dem Raspberry Pi.
-	Eine einfache Schritt für Schritt Anleitung ist hier zu finden: 
+###### Installieren Sie Raspbian auf dem Raspberry Pi.
+	Eine einfache Schritt-für-Schritt-Anleitung ist hier zu finden: 
 	https://www.raspberrypi.org/learning/noobs-install/
 	
-###### Verbinden sie den Raspberry mit dem Internet.
+###### Verbinden Sie den Raspberry mit dem Internet.
 
-###### Installieren der benötigten Software.
-	Führen sie folgende Befehle in der Konsole aus:
+###### Installation der benötigten Software.
+	Führen Sie folgende Befehle in der Konsole aus:
 	sudo apt-get update
 	sudo apt-get upgrade
 
@@ -132,7 +128,7 @@ Außerdem sind Bootstrap und die Material-Icons von Google im Einsatz.
 	nvm install node
 	nvm install npm
 
-	prüfe installation mit:
+	Prüfe Installation mit:
 	node --version 
 	npm --version
 
@@ -141,7 +137,7 @@ Außerdem sind Bootstrap und die Material-Icons von Google im Einsatz.
 	mysql -u „adminname“ -p -h localhost
 	Anschließend das bei der Installation vergebene Passwort eingeben.
 	
-	In der mysql konsole (angezeigt durch mysql> folgende Befehle eingeben:
+	In der mysql Konsole (angezeigt durch mysql>) folgende Befehle eingeben:
 	
 	create Database cbm;
 	use cbm;
@@ -164,13 +160,13 @@ Außerdem sind Bootstrap und die Material-Icons von Google im Einsatz.
 	
 	Eingabe für jeden Raum wiederholen.
 
-	Die zugeordneten Ids können nun mit folgender Eingabe angezeigt werden:
+	Die zugeordneten IDs können nun mit folgender Eingabe angezeigt werden:
 	Select * from rooms;
 
 	Anschließend Sensoren in DB eintragen:
 	Insert into sensors(room_id,name,type,url) values(„raum_id“,“name“,“typ“,“url“);
 	
-	Id muss richtigem Raum zugeordnet sein.
+	ID muss richtigem Raum zugeordnet sein.
 	Name ist frei wählbar.
 	Typ muss entweder „temp“, „vol“ oder „light“ sein.
 	In url muss die URL-Adresse eingetragen werden unter der der Sensor erreichbar ist.
