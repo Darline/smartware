@@ -5,7 +5,6 @@ Die Projektarbeit dieses Kurses fand in zwei Pfasen statt: Dem Design Thinking u
 # Übersicht
 * [POV](#pov)
 * [Lösungsansatz/Prototyp](#lösungsansatzprototyp)
-	* [Konzept](#konzept)
 * [(Bau-)Anleitung](#bau-anleitung)
 	* [Laserschranke](#laserschranke)
 		* [Schranken](#schranken)
